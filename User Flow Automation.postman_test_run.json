@@ -1,0 +1,146 @@
+{
+	"id": "d8083a0e-1c97-4adc-8282-04a2a2cbcfe3",
+	"name": "User Flow Automation",
+	"timestamp": "2026-02-09T15:55:01.681Z",
+	"collection_id": "48079896-b962fdce-fe8e-4c13-af17-38cf39f5c7aa",
+	"folder_id": 0,
+	"environment_id": "48079896-2fcbea00-55b4-46ed-87d1-bd64fcdc9916",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-02-09T15:54:58.499Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "89b2fd1a-60b1-4681-b505-9225f0a94af9",
+			"name": "login extract token",
+			"url": "https://reqres.in/api/login",
+			"time": 774,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response has 'token' property": true
+			},
+			"testPassFailCounts": {
+				"Response has 'token' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				774
+			],
+			"allTests": [
+				{
+					"Response has 'token' property": true
+				}
+			]
+		},
+		{
+			"id": "621246bc-eea2-4465-8883-0da6857de204",
+			"name": "create user",
+			"url": "https://reqres.in/api/users",
+			"time": 286,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response is valid JSON and contains 'id'": true
+			},
+			"testPassFailCounts": {
+				"Response is valid JSON and contains 'id'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				286
+			],
+			"allTests": [
+				{
+					"Response is valid JSON and contains 'id'": true
+				}
+			]
+		},
+		{
+			"id": "30fab6a9-f03a-43ae-b8a4-5328e46c1021",
+			"name": "update user",
+			"url": "https://reqres.in/api/users/452",
+			"time": 531,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				531
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6ff4ac44-6c5c-4c24-957c-f731a7d8bd36",
+			"name": "{{baseUrl}}/api/users/{{userId}}",
+			"url": "https://reqres.in/api/users/452",
+			"time": 267,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				267
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1858,
+	"collection": {
+		"requests": [
+			{
+				"id": "89b2fd1a-60b1-4681-b505-9225f0a94af9",
+				"method": "POST"
+			},
+			{
+				"id": "621246bc-eea2-4465-8883-0da6857de204",
+				"method": "POST"
+			},
+			{
+				"id": "30fab6a9-f03a-43ae-b8a4-5328e46c1021",
+				"method": "PUT"
+			},
+			{
+				"id": "6ff4ac44-6c5c-4c24-957c-f731a7d8bd36",
+				"method": "DELETE"
+			}
+		]
+	}
+}
